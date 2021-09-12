@@ -116,7 +116,7 @@ class HRI:
             self.text_to_be_analysed = "Take Order"
             response = self.call_dialogflow()
             # TODO this is the only place dialogflow is needed
-            # Take Orderù
+            # Take Order
             self._result.result=True
             self._result.order_list=response
 
