@@ -3,7 +3,7 @@
 # import ROS headers
 import rospy
 import actionlib
-from std_msgs import String
+from std_msgs.msg import String
 
 # import PAL Robotics custom headers
 from pal_interaction_msgs.msg import TtsAction, TtsGoal
