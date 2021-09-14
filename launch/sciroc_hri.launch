@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+	<!--  Dialogflow order interaction  -->
+  <include file="$(find dialogflow_ros)/launch/dialogflow_ros.launch"/>
+	<!--  Complete Human Robot Interaction  -->
+	<node pkg="sciroc_hri"  type="hri.py"	name="hri" output="screen"  required="true" respawn="false" args="--wait"/>
+	
+</launch>
