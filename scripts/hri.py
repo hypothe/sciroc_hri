@@ -15,10 +15,10 @@ from sciroc_hri.msg import HRIAction, HRIFeedback, HRIResult
 import os
 import dialogflow
 from google.api_core.exceptions import InvalidArgument
-from dialogflow_ros import DialogflowClient, DialogflowRequest
+from dialogflow_ros import DialogflowClient
 from dialogflow_ros.msg import *
 import time
-from dialogflow_ros.msg import GetOrderAction
+from dialogflow_ros.msg import GetOrderAction, DialogflowRequest
 import actionlib
 from std_msgs.msg import Empty
 
@@ -144,6 +144,6 @@ class HRI:
 if __name__ == "__main__":
 
     rospy.init_node("sciroc_hri")
-    g=HRI()
+    g=HRI(rospy.get_name())
     client = actionlib.SimpleActionClient('requested_by_hri', GetOrderAction)
     rospy.spin()
